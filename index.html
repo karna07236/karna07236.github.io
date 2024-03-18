@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Karna's portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/mylogo.jpg">
+    <script src="https://kit.fontawesome.com/2609c99dde.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, <br> This is<span> Sai</span></div>
+        </div>
+    </div>
+<!-- ------------------about----------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                   
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p class="para">Hello there! I am a versatile web developer, UI/UX designer, and Python developer who enjoys creating user-friendly and engaging digital experiences. I've honed my skills in creating responsive web interfaces and web applications. I've worked on front-end web development projects, including designing and developing user interfaces. In my Python projects, I've worked on a variety of software applications. In Python, I wrote a password generator and a client-server application. Python, Java, C, JavaScript, HTML, and CSS are among the programming languages I am familiar with.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Ui/UX Designing</li>
+                            <li><span>Web Developer</span><br>Web Developing</li>
+                            <li><span>Python Developer</span><br>Python based applications</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                       
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017-2018</span><br>SSC at Sri chaithanya High school</li>
+                            <li><span>2018-2020</span><br>MPC at Sri Chaitanya jr collage</li>
+                            <li><span>2020-Present</span><br>B.Tech at SRM Institute of Science and Technology</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ------------------projects----------------->
+<div id="projects">
+    <div class="container">
+        <h1> <div class="sub-title"></div>Projects</h1>
+        <div class="project-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Client-Server using Python</h2>
+                <p>A Client-Server chat application using python language</p>
+                <a href="https://github.com/karna07236/CLIENT--SERVER-Chat-application-main">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Password Generator</h2>
+                <p>A complex password generator using python language</p>
+                <a href="https://github.com/karna07236/Password-generetor--main">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Facial emotion detection</h2>
+                <p>A facial emotion detection program</p>
+                <a href="https://github.com/karna07236/Facial-Emotion-Detection-main">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Apartment Management system</h2>
+                <p>An UI frendly apartment Management system</p>
+                <a href="https://github.com/karna07236/DBMS-Apartment-s-management-system-main">Learn more</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- ------------------contact----------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> karnasai07@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 6302983731</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/karnasaivardhan.karnasaivardhan"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/karna0765"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/karna-sai-b328ba2ba/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/My Resume.pdf" download class="btn">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Goutham. Made with passion</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwNUBAoYOGlCgGAFedMd5yXbroKP7Ni-tMgmZep7xHahbUo0u0ObJU6EEZ2ZhDCHDB2/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    
+</body>
+</html>
